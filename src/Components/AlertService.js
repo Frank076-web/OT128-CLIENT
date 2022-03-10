@@ -1,5 +1,4 @@
 import Swal from 'sweetalert2'
-import { Redirect, useHistory } from 'react-router-dom'
 
 export function alertServiceInfoTimer(title, showConfirmButton, timer) {
   Swal.fire({
@@ -76,7 +75,7 @@ export function alertDonationsMP(image) {
         imageUrl: image,
         confirmButtonText: 'Ok',
         preConfirm: () => {
-          history.push("/gracias")
+          return window.location.replace(/#/gracias)
         },
       })
     }
